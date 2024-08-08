@@ -1,0 +1,105 @@
+/* ==============================================================
+   Reseteo de márgenes y rellenos
+   ============================================================== */
+/* CSS RESET June 2024 */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    min-height: 100dvh;
+    /* border: 2px solid red; */
+  }
+  
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  
+  p {
+    text-wrap: pretty;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
+  
+  img,
+  video,
+  svg {
+    height: auto;
+    max-width: 100%;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+      transition: none;
+    }
+  }
+
+
+:root {
+    --height-header: 75px;
+}
+
+/* Estilos para la barra de desplazamiento en WebKit */
+::-webkit-scrollbar {
+  width: 5px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color del rastro (parte de fondo) */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color del pulgar (parte que se mueve) */
+  border-radius: 10px; /* Bordes redondeados para el pulgar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color del pulgar al pasar el ratón */
+}
+
+body {
+    overflow-x: hidden !important;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+
+
+.contenedor-layout {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: relative;
+    /* overflow-x: hidden !important; */
+}
+
+.contenedor-prinsipal {
+    min-height: calc(100vh - var(--height-header));
+}

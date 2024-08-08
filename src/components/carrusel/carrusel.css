@@ -1,0 +1,120 @@
+
+
+/* Estilo del contenedor del carrusel */
+.contenedor-carrusel {
+    width: 100%;
+    height: calc(100vh - var(--height-header));
+    display: flex;
+}
+
+/* Estilo general del carrusel */
+.swiper {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+}
+
+/* Estilo de las diapositivas del carrusel */
+.swiper-slide {
+    font-size: 18px;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 40px 60px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Estilo del título dentro de la diapositiva del carrusel */
+.swiper-slide .title {
+    font-size: 2.8rem;
+    white-space: nowrap;
+    margin-top: 10px;
+    font-weight: 600;
+    color: transparent;
+    -webkit-text-stroke: 1px #00235a;
+    text-stroke: 1px #00235a;
+}
+
+/* Estilo del subtítulo dentro de la diapositiva del carrusel */
+.swiper-slide .subtitle {
+    font-size: 1.8rem;
+    color: #00235a;
+    margin-top: 5px;
+    font-weight: 550;
+    padding-left: 3px;
+}
+
+/* Estilo del texto dentro de la diapositiva del carrusel */
+.swiper-slide .text {
+    font-size: 1rem;
+    color: #00235a;
+    max-width: 600px;
+    line-height: 1.6;
+    font-weight: 600;
+    margin-top: 15px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Estilo de los botones de navegación del carrusel */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    content: '';
+    display: none;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.swiper-button-next img,
+.swiper-button-prev img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Media Queries para dispositivos menores de 600px */
+@media (max-width: 600px) {
+    .swiper-slide {
+        padding: 20px 15px;
+    }
+
+    .swiper-slide .title {
+        font-size: 1.8rem;
+    }
+
+    .swiper-slide .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .swiper-slide .text {
+        font-size: 0.8rem;
+    }
+}
+
+/* Media Queries para dispositivos de al menos 600px */
+@media (min-width: 600px) {
+    .swiper-slide .title {
+        font-size: 3.8rem;
+    }
+
+    .swiper-slide .subtitle {
+        font-size: 2.5rem;
+    }
+
+    .swiper-slide .text {
+        font-size: 1.2rem;
+    }
+}

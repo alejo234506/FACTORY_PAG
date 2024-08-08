@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import MainLayout from './components/layout/MainLayout';
-import InicioPage from './pages/inicio/Inicio'
+import MainLayout from './layout/MainLayout';
+import InicioPage from './pages/inicio/InicioPage'
+import CertificadosPage from './pages/certificados/CertificadosPage'
 
 
 function App() {
@@ -11,6 +12,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<MainLayout><InicioPage /></MainLayout>} />
+        <Route path="/inicio" element={<MainLayout><InicioPage /></MainLayout>} />
+        <Route path="/certificados" element={<MainLayout><CertificadosPage /></MainLayout>} />
       </Routes>
     </Router>
   )
