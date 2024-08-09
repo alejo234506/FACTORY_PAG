@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';  // Importar Link
 import arrowIcon from '../../assets/img/down-arrow-svgrepo-com.svg';
 
 const Dropdown = ({ title, items }) => {
@@ -19,7 +20,7 @@ const Dropdown = ({ title, items }) => {
           item.subItems ? (
             <Dropdown key={index} title={item.title} items={item.subItems} />
           ) : (
-            <a key={index} href={item.href} className="dropdown-item">{item.label}</a>
+            <Link key={index} to={item.to} className="dropdown-item">{item.label}</Link>  // Cambiar <a> a <Link>
           )
         ))}
       </div>

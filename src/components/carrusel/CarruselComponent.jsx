@@ -1,37 +1,75 @@
 import React from 'react';
-import iagenCarrusel1 from '../../assets/img/hero-06.jpg';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay, Parallax } from 'swiper/modules';
+import { Link } from 'react-router-dom';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import './carrusel.css';
+
+import imagenCarrusel1 from '../../assets/img/hero-06.jpg';
 import imagenCarrusel2 from '../../assets/img/slider-1.jpg';
 import nextArrow from '../../assets/img/next-right-arrow-svgrepo-com.svg';
 import prevArrow from '../../assets/img/left-arrow-svgrepo-com.svg';
-import './swiper-bundle.min.css';
-import './carrusel.css';
 
 const CarruselComponent = () => (
   <div className="contenedor-carrusel">
-    <div style={{ '--swiper-navigation-color': '#fff', '--swiper-pagination-color': '#fff' }} className="swiper mySwiper">
-      <div className="swiper-wrapper">
-        <div className="swiper-slide" style={{ backgroundImage: `url(${iagenCarrusel1})` }}>
-          <div className="title" data-swiper-parallax="-300">SOMOS FACTORY</div>
-          <div className="subtitle" data-swiper-parallax="-200">INTEGRATED LOGISTICS</div>
-          <div className="text" data-swiper-parallax="-100">
-            <p>Ingeniería civil, electrónica, eléctrica, sistemas, mecánica, ambiental e industrial. logística “transporte especial de pasajeros, transporte terrestre de carga: seca, líquidos, sólidos, condensadas y productos derivados del petróleo”, alquiler de vehículos y maquinaria pesada, comercializador de bienes y servicios online</p>
+    <Swiper
+      modules={[Navigation, Pagination, Autoplay, Parallax]}
+      spaceBetween={30}
+      loop={true}
+      autoplay={{ delay: 8000, disableOnInteraction: false }}
+      navigation={{
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }}
+      pagination={{ clickable: true }}
+      parallax={true}
+    >
+
+      <SwiperSlide>
+        <div
+          className="swiper-slide"
+          style={{ backgroundImage: `url(${imagenCarrusel1})` }}
+        >
+          <div className="overlay"></div>
+          <div className='contenedor-contenido-carrusel'> 
+            <div className="title" data-swiper-parallax="-300">SOMOS FACTORY</div>
+            <div className="subtitle" data-swiper-parallax="-200">INTEGRATED LOGISTICS</div>
+            <div className="text" data-swiper-parallax="-100">
+              <p>
+              INGENIERÍA CIVIL, ELECTRÓNICA, ELECTRICA, SISTEMAS, MECÁNICA, AMBIENTAL E INDUSTRIAL. LOGÍSTICA “TRANSPORTE ESPECIAL DE PASAJEROS, TRANSPORTE TERRESTRE DE CARGA: SECA, LIQUIDOS, SOLIDOS, CONDENSADAS Y PRODUCTOS DERIVADOS DEL PETRÓLEO”, ALQUILER DE VEHÍCULOS Y MAQUINARIA PESADA, COMERCIALIZADOR DE BIENES Y SERVICIOS ONLINE.</p>
+            </div>
+
+            <div className='contenedor-link-carrusel'>
+              <Link to="/" className='item-link-carrusel color-naranja'>CONTACTANOS</Link>
+            </div>
           </div>
         </div>
-        <div className="swiper-slide" style={{ backgroundImage: `url(${imagenCarrusel2})` }}>
-          <div className="title" data-swiper-parallax="-300">Visión innovadora</div>
-          <div className="subtitle" data-swiper-parallax="-200">y vanguardista del mercado</div>
-          <div className="text" data-swiper-parallax="-100">
-            <p>Presentando soluciones integrales que potencian la economía de su empresa</p>
+      </SwiperSlide>
+
+      <SwiperSlide>
+        <div
+          className="swiper-slide"
+          style={{ backgroundImage: `url(${imagenCarrusel2})` }}
+        >
+          <div className="overlay"></div>
+          <div className='contenedor-contenido-carrusel'> 
+            <div className="title" data-swiper-parallax="-300">Vision Inovadora</div>
+            <div className="subtitle" data-swiper-parallax="-200">Y VANGUARDISTA DEL MERCADO</div>
+            <div className="text" data-swiper-parallax="-100">
+              <p>PRESTANDO SOLUCIONES INTEGRALES QUE POTENCIAN LA ECONOMIA DE SU EMPRESA</p>
+            </div>
+
+            <div className='contenedor-link-carrusel'>
+              <Link to="/" className='item-link-carrusel color-naranja'>CONOCE MAS</Link>
+              <Link to="/" className='item-link-carrusel color-azul'>ESCRIBENOS</Link>
+            </div>
           </div>
         </div>
-        <div className="swiper-slide" style={{ backgroundImage: `url(${iagenCarrusel1})` }}>
-          <div className="title" data-swiper-parallax="-300">Slide 3</div>
-          <div className="subtitle" data-swiper-parallax="-200">Subtitle</div>
-          <div className="text" data-swiper-parallax="-100">
-            <p>DESCRIPCIÓN DE LA PÁGINA Y NO SÉ MÁS...</p>
-          </div>
-        </div>
-      </div>
+      </SwiperSlide>
+
+
       <div className="swiper-button-next">
         <img src={nextArrow} alt="Next" />
       </div>
@@ -39,7 +77,7 @@ const CarruselComponent = () => (
         <img src={prevArrow} alt="Previous" />
       </div>
       <div className="swiper-pagination"></div>
-    </div>
+    </Swiper>
   </div>
 );
 

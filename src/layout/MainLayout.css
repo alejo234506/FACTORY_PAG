@@ -64,7 +64,7 @@
 
 /* Estilos para la barra de desplazamiento en WebKit */
 ::-webkit-scrollbar {
-  width: 5px; /* Ancho de la barra de desplazamiento */
+  width: 8px; /* Ancho de la barra de desplazamiento */
 }
 
 ::-webkit-scrollbar-track {
@@ -72,7 +72,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888; /* Color del pulgar (parte que se mueve) */
+  background: #f49d15; /* Color del pulgar (parte que se mueve) */
   border-radius: 10px; /* Bordes redondeados para el pulgar */
 }
 
@@ -80,14 +80,26 @@
   background: #555; /* Color del pulgar al pasar el ratón */
 }
 
+
+
+/* @font-face {
+  font-family: 'Satoshi';
+  src: url('../assets//Satoshi_Complete/Fonts/WEB/fonts/Satoshi-BlackItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../assets//Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-    overflow-x: hidden !important;
+  font-family: 'Satoshi', sans-serif;
+  overflow-x: hidden !important;
 }
-
-.no-scroll {
-  overflow-y: hidden;
-}
-
 
 
 .contenedor-layout {
@@ -103,3 +115,13 @@ body {
 .contenedor-prinsipal {
     min-height: calc(100vh - var(--height-header));
 }
+
+@media (max-width: 1037px) {
+  body.no-scroll  .contenedor-prinsipal {
+      display: none;
+    }
+    body.no-scroll {
+      overflow-y: hidden;
+    }
+
+  }
