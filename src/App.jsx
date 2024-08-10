@@ -3,9 +3,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import MainLayout from './layout/MainLayout';
 import InicioPage from './pages/InicioPage';
-import MisionPage from './pages/MisionPage';
-import VisionPage from './pages/VisionPage';
-import ValoresPage from './pages/ValoresPage';
+// import MisionPage from './pages/MisionPage';
+// import VisionPage from './pages/VisionPage';
+// import ValoresPage from './pages/ValoresPage';
+import QuienesSomosPage from './pages/QuienesSomosPage';
 import ProyectosPage from './pages/ProyectosPage';
 import CertificadosPage from './pages/CertificadosPage';
 import ContactoPage from './pages/ContactoPage';
@@ -33,9 +34,9 @@ function App() {
       <Routes>
         <Route path="/" element={<MainLayout><InicioPage /></MainLayout>} />
         <Route path="/inicio" element={<MainLayout><InicioPage /></MainLayout>} />
-        <Route path="/quienes-somos/mision" element={<MainLayout><MisionPage /></MainLayout>} />
-        <Route path="/quienes-somos/vision" element={<MainLayout><VisionPage /></MainLayout>} />
-        <Route path="/quienes-somos/valores" element={<MainLayout><ValoresPage /></MainLayout>} />
+        <Route path="/quienes-somos" element={<MainLayout><QuienesSomosPage /></MainLayout>} />
+        {/* <Route path="/quienes-somos/vision" element={<MainLayout><VisionPage /></MainLayout>} /> */}
+        {/* <Route path="/quienes-somos/valores" element={<MainLayout><ValoresPage /></MainLayout>} /> */}
         <Route path="/quienes-somos/proyectos" element={<MainLayout><ProyectosPage /></MainLayout>} />
         <Route path="/quienes-somos/certificados" element={<MainLayout><CertificadosPage /></MainLayout>} />
         <Route path="/ingenierias" element={<MainLayout><IngenieriasPage /></MainLayout>} />

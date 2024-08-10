@@ -2,6 +2,12 @@
    Reseteo de márgenes y rellenos
    ============================================================== */
 /* CSS RESET June 2024 */
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
     margin: 0;
     padding: 0;

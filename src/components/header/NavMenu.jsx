@@ -10,9 +10,7 @@ const NavMenu = ({ isMenuOpen }) => {
       <Dropdown
         title="Quienes Somos"
         items={[
-          { label: 'Misión', to: '/quienes-somos/mision' },  
-          { label: 'Visión', to: '/quienes-somos/vision' },
-          { label: 'Valores', to: '/quienes-somos/valores' },
+          { label: 'Quienes somos', to: '/quienes-somos' },
           { label: 'Proyectos', to: '/quienes-somos/proyectos' },
           { label: 'Certificados', to: '/quienes-somos/certificados' },
         ]}
